@@ -6,7 +6,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 RUN apk add --no-cache jq python3 py3-pip \
-    && pip3 install --no-cache-dir crcmod paho-mqtt
+    && pip3 install --break-system-packages --no-cache-dir crcmod paho-mqtt
 
 
 COPY run.sh monitor.py /
