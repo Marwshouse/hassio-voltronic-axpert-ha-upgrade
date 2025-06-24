@@ -1,4 +1,7 @@
-FROM ghcr.io/home-assistant/{arch}-base-alpine:3.18
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+#FROM ghcr.io/home-assistant/{arch}-base-alpine:3.18
 
 ENV LANG C.UTF-8
 
