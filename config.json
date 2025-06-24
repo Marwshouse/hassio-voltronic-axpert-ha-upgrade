@@ -28,5 +28,5 @@
         "mqtt_topic_parallel": "str",
         "mqtt_topic_settings": "str",
         "mqtt_topic": "str"
-    },
+    }
 }
