@@ -1,16 +1,9 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/{arch}-base-debian:bookworm
-FROM $BUILD_FROM
+FROM ghcr.io/home-assistant/{arch}-base-alpine:3.18
 
 ENV LANG C.UTF-8
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        jq \
-        python3 \
-        python3-pip \
-    && pip3 install --break-system-packages --no-cache-dir crcmod paho-mqtt \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache jq python3 py3-pip \
+    && pip3 install --no-cache-dir crcmod paho-mqtt
 
 
 COPY run.sh monitor.py /
