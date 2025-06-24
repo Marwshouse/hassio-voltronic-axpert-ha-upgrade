@@ -29,5 +29,4 @@
         "mqtt_topic_settings": "str",
         "mqtt_topic": "str"
     },
-    "image": "local/{arch}-hassio-voltronic-axpert"
 }
