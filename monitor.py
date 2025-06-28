@@ -223,7 +223,7 @@ def main(
     mqtt_topic_settings,
     mqtt_topic_parallel,
     mqtt_topic,
-    sleep_query=0,
+    sleep_query=2,
     sleep_iteration=0,
 ):
     client = mqtt_connect(
