@@ -57,7 +57,7 @@ PV_POWER_BALANCE = {
 
 
 def mqtt_connect(*, server, username, password, client_id):
-    client = mqtt.Client(client_id=client_id)
+    client = mqtt.Client(client_id=client_id, protocol=mqtt.MQTTv311)
     client.username_pw_set(username, password)
     client.connect(server)
     return client
